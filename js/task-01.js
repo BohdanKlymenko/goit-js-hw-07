@@ -1,13 +1,16 @@
-const elemCategories = document.querySelector("#categories");
+const elemCat = document.querySelector("#categories");
 
-const elemItems = elemCategories.querySelectorAll(".item");
+const elemItems = elemCat.querySelectorAll(".item");
 console.log(`В списке ${elemItems.length} категории`);
 
 const titles = [];
-elemItems.forEach((elem) => {
-  console.log("Категория : ", elem.getElementsByTagName("h2")[0].textContent);
+elemItems.forEach((element) => {
+  console.log(
+    "Категория : ",
+    element.getElementsByTagName("h2")[0].textContent
+  );
   console.log(
     "Количество элементов : ",
-    elem.getElementsByTagName("li").length
+    element.getElementsByTagName("li").length
   );
 });
